@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  # Khai bao image se deploy
+  catpcha_api:
+    build:
+      network: host
+      context: ./source         # duong dan chua code
+      dockerfile: Dockerfile    # duong dan tro den Dockerfile
+
+    network_mode: host
+    image: misadockerhub.vn:30100/captcha_api:1.0.0       #ten image
+    container_name: ""            # ten image hien thi, co the can hoac khong
+
+
